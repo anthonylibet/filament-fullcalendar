@@ -4,13 +4,13 @@
 
 <x-filament-widgets::widget>
     <x-filament::section>
-        @if ($this->title || $this->description)
+        @if ($this->title() || $this->description())
             <div>
                 <h2 class="text-2xl font-medium leading-6 text-gray-900">
-                    {{ $this->title }}
+                    {{ $this->title() }}
                 </h2>
                 <p class="mt-1 text-sm text-gray-500">
-                    {{ $this->description }}
+                    {{ $this->description() }}
                 </p>
             </div>
         @endif

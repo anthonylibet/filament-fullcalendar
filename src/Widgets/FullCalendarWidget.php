@@ -23,10 +23,12 @@ class FullCalendarWidget extends Widget implements HasForms, HasActions
 
     protected int | string | array $columnSpan = 'full';
 
-    protected string $title;
-    protected string $description;
-
-
+    protected function title() {
+        return null;
+    }
+    protected function description() {
+        return null;
+    }
 
     protected function calendarConfig() {
         return [];
