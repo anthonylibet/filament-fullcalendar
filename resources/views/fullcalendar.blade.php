@@ -4,6 +4,16 @@
 
 <x-filament-widgets::widget>
     <x-filament::section>
+        @if ($this->title || $this->description)
+            <div>
+                <h2 class="text-2xl font-medium leading-6 text-gray-900">
+                    {{ $this->title }}
+                </h2>
+                <p class="mt-1 text-sm text-gray-500">
+                    {{ $this->description }}
+                </p>
+            </div>
+        @endif
         <div class="flex justify-end flex-1 mb-4">
             <x-filament-actions::actions :actions="$this->getCachedHeaderActions()" class="shrink-0" />
         </div>
